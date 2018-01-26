@@ -53,3 +53,7 @@ if __name__ == '__main__':
             GPIO.output(pins[i], GPIO.HIGH)    # Turn off all leds  
         GPIO.cleanup()  
         
+        print("Cleanup")
+    
+    print("Exit")
+        
