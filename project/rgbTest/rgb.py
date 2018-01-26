@@ -39,7 +39,7 @@ if __name__ == '__main__':
     p_R.start(100)      # Initial duty Cycle = 100(leds off)  
     p_G.start(100)  
     p_B.start(100)  
-      
+    print("Start running:")
     try:  
         while True:  
             for col in colors:  
