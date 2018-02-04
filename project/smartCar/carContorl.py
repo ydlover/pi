@@ -21,34 +21,34 @@ class Car(object):
         GPIO.setup(self.IN4,GPIO.OUT)
 
     def forward(self,continuedTime):
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
-        GPIO.output(IN3,GPIO.HIGH)
-        GPIO.output(IN4,GPIO.LOW)
+        GPIO.output(self.IN1,GPIO.HIGH)
+        GPIO.output(self.IN2,GPIO.LOW)
+        GPIO.output(self.IN3,GPIO.HIGH)
+        GPIO.output(self.IN4,GPIO.LOW)
         time.sleep(continuedTime)
         GPIO.cleanup()
     
     def callback(self,continuedTime):
-        GPIO.output(IN1,GPIO.LOW)
-        GPIO.output(IN2,GPIO.HIGH)
-        GPIO.output(IN3,GPIO.LOW)
-        GPIO.output(IN4,GPIO.HIGH)
+        GPIO.output(self.IN1,GPIO.LOW)
+        GPIO.output(self.IN2,GPIO.HIGH)
+        GPIO.output(self.IN3,GPIO.LOW)
+        GPIO.output(self.IN4,GPIO.HIGH)
         time.sleep(continuedTime)
         GPIO.cleanup()
     
     def left(self,continuedTime):
-        GPIO.output(IN1,False)
-        GPIO.output(IN2,False)
-        GPIO.output(IN3,GPIO.HIGH)
-        GPIO.output(IN4,GPIO.LOW)
+        GPIO.output(self.IN1,False)
+        GPIO.output(self.IN2,False)
+        GPIO.output(self.IN3,GPIO.HIGH)
+        GPIO.output(self.IN4,GPIO.LOW)
         time.sleep(continuedTime)
         GPIO.cleanup()
     
     def right(self,continuedTime):
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
-        GPIO.output(IN3,False)
-        GPIO.output(IN4,False)
+        GPIO.output(self.IN1,GPIO.HIGH)
+        GPIO.output(self.IN2,GPIO.LOW)
+        GPIO.output(self.IN3,False)
+        GPIO.output(self.IN4,False)
         time.sleep(continuedTime)
         GPIO.cleanup()
 
