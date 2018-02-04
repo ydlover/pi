@@ -5,7 +5,7 @@ Created on 2018-2-4
 '''
 
 import RPi.GPIO as GPIO
-import time
+import time,sys
 
 class Car(object):
     def __init__(self):
