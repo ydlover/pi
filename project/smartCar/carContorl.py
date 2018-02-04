@@ -54,5 +54,21 @@ class Car(object):
 
 
 if __name__ == '__main__':
+    cmd = "f"
+    if len(sys.argv) == 2:  
+        cmd=sys.argv[1].strip()
+    timeLen = 10
+    if len(sys.argv) == 3:  
+        timeLen=int(sys.argv[2].strip())
+    print("cmd=%s,timeLen=%s"%(cmd,timeLen))
     car = Car()
-    car.forward(10)
+    if(cmd=="f"):
+        car.forward(timeLen)
+    elif(cmd=="c"):
+        car.callback(timeLen)
+    elif(cmd=="l"):
+        car.left(timeLen)
+    elif(cmd=="r"):
+        car.right(timeLen)
+    else:
+        print("invalid cmd:%s"%(cmd))
