@@ -55,10 +55,10 @@ class Car(object):
 
 if __name__ == '__main__':
     cmd = "f"
-    if len(sys.argv) == 2:  
+    if len(sys.argv) >= 2:  
         cmd=sys.argv[1].strip()
     timeLen = 10
-    if len(sys.argv) == 3:  
+    if len(sys.argv) >= 3:  
         timeLen=int(sys.argv[2].strip())
     print("cmd=%s,timeLen=%s"%(cmd,timeLen))
     car = Car()
